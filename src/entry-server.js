@@ -1,4 +1,4 @@
-import { createApp } from './app'
+import {createApp} from './app'
 export default context => {
 	return new Promise((resolve, reject) => {
 		const { app, router } = createApp()
@@ -6,9 +6,10 @@ export default context => {
 		router.onReady(() => {
 			const matchedComponents = router.getMatchedComponents()
 			if (!matchedComponents.length) {
-			 	return reject({ code:404})
+			 	return reject({code:404})
 			}
 			resolve(app)
-		}, reject)	
+		}, reject)
 	})
+	.catch(new Function());	
 }

@@ -4,6 +4,19 @@ Vue.use(Router)
 export function createRouter(){
 	return new Router({
 		mode:'history',
-		routes:[]
+		routes:[
+			{ 
+			  path:'*',
+			  redirect:'/1'
+			},
+			{ 
+			  path:'/1',
+			  component: require("./components/p1/index.vue")
+			},
+			{
+			  path:'/2',
+			  component: require("./components/p2/index.vue")
+			}
+		]
 	})
 }
