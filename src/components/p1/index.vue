@@ -1,12 +1,6 @@
 <template>
-	<div>hello {{ world }} </div>
+	<div>page 1</div>
 </template>
 <script>
-export default{
-	data(){
-		return{
-			name:`world`
-		}
-	}
-}
+export default{}
 </script>

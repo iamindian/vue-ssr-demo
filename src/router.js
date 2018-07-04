@@ -11,11 +11,11 @@ export function createRouter(){
 			},
 			{ 
 			  path:'/1',
-			  component: require("./components/p1/index.vue")
+			  component: require("./components/p1/index.vue").default
 			},
 			{
 			  path:'/2',
-			  component: require("./components/p2/index.vue")
+			  component: require("./components/p2/index.vue").default
 			}
 		]
 	})

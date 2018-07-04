@@ -6,9 +6,9 @@ server.get('*', (req, res) => {
 		url: req.url
 	}
 	createApp(context).then(app => {
-		console.log(app)
 		renderer.renderToString(app, (err, html) => {
 			if (err) {
+				console.log(err)
 				if (err.code === 404) {
 					res.status(404).end('Page not found')
 				} else {
